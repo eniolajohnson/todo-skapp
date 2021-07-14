@@ -12,7 +12,7 @@ function App() {
       <header>
         <h1>What's your focus today?</h1>
         <Form inputText={inputText} setInputText={setInputText} todos={todos} setTodos={setTodos} />
-        <TodoList todos={todos} />
+        <TodoList todos={todos} setTodos={setTodos} />
       </header>
     </div>
   );

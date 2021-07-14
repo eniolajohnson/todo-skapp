@@ -8,7 +8,6 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputText !== "") {
-      console.log('yaay');
       setTodos([
         ...todos, {
           todoText: inputText,
