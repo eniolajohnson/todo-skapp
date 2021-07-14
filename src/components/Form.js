@@ -7,12 +7,16 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTodos([
-      ...todos, {
-        todoText: inputText,
-        id: Math.floor(Math.random() * 1000)
-      }
-    ]);
+    if (inputText !== "") {
+      console.log('yaay');
+      setTodos([
+        ...todos, {
+          todoText: inputText,
+          id: Math.floor(Math.random() * 1000)
+        }
+      ]);
+    }
+    
     setInputText("");
   };
 
