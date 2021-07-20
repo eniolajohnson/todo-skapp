@@ -6,11 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 If you will like to recreate this app in the project directory, you can:
 
-### Prerequisites
+### Set up
 
 Have Nodejs installed on your pc.
 
-Install skynet-js by running `npm add skynet-js@beta`
+Clone this repo.
+
+Run `npm install` to install all dependencies
 
 ### `npm start`
 
