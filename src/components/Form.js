@@ -1,22 +1,26 @@
 import React from "react";
+import nextId from "react-id-generator";
 
-const Form = ({ inputText, setInputText, todos, setTodos }) => {
+const Form = ({ inputText, setInputText, todos, setTodos, skyAdd }) => {
+  const id = nextId();
+
   const handleInputText = (e) => {
     setInputText(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleAddTodo = async (e) => {
     e.preventDefault();
     if (inputText !== "") {
       setTodos([
         ...todos, {
           todoText: inputText,
-          id: Math.floor(Math.random() * 1000)
+          id
         }
       ]);
     }
     
     setInputText("");
+    await skyAdd(todos);
   };
 
   return (
@@ -25,7 +29,7 @@ const Form = ({ inputText, setInputText, todos, setTodos }) => {
         value={inputText} 
         onChange={handleInputText} 
         type="text" className="input-text" />
-      <button onClick={handleSubmit} className="add-todo">Add todo</button>
+      <button onClick={handleAddTodo} className="add-todo">Add todo</button>
     </form>
   );
 }
