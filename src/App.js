@@ -11,7 +11,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [userID, setUserID] = useState('');
   const [filePath, setFilePath] = useState('');
-  const [dataKey] = useState('productive321');
+  const [dataKey] = useState(userID);
   const dataDomain = 'localhost';
   const portal = window.location.hostname === 'localhost' ? 'https://siasky.net' : undefined;
   const client  = new SkynetClient(portal);
