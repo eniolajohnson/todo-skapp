@@ -1,4 +1,8 @@
-# Getting Started with the Todo Skapp
+# About the Todo Skapp
+
+This Todo list project mandates a user to login (no emails or personal information needed) on Skynet using MySky to access the app. 
+
+The user's data is then stored on Skynet using the MySky getJson and setJson methods.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
